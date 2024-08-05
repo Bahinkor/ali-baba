@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "alibaba";
+        src: url("/src/fonts/Alibaba-regular.woff2") format("woff2");
+    }
+
+    body {
+        font-family: "alibaba", sans-serif;
+    }
+}

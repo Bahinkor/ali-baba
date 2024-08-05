@@ -1,5 +1,6 @@
 import {useRoutes} from "react-router-dom";
 import routes from "./routes/routes.jsx";
+import Header from "./Component/Header/Header.jsx";
 
 export default function App() {
     //router
@@ -8,7 +9,7 @@ export default function App() {
     //JSX
     return (
         <>
-            {/* header */}
+            <Header/>
 
             {router}
 
