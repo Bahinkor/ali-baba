@@ -8,10 +8,10 @@ import {FaRegUser} from "react-icons/fa";
 export default function Header() {
     //JSX
     return (
-        <header className="bg-white">
+        <header className="sticky bg-white shadow-sm">
             <div className="container">
                 {/* top menu */}
-                <div className="flex items-center justify-between w-full py-4">
+                <div className="flex items-center justify-between w-full py-1 text-gray-600">
                     <div className="flex items-center">
                         <Link to="/" className="ml-16">
                             <img
@@ -19,13 +19,39 @@ export default function Header() {
                                 alt="Ali baba Logo"/>
                         </Link>
 
-                        <ul className="flex items-center [&>li]:flex [&>li]:items-center [&>li]:py-1 [&>li]:px-4">
-                            <li>بلیط
-                                <RiArrowDownSLine/>
+                        <ul className="flex items-center [&>li]:flex [&>li]:items-center [&>li]:gap-1 [&>li]:py-1 [&>li]:px-4 [&>li]:cursor-pointer [&>span]:w-px [&>span]:h-6 [&>span]:bg-gray-300 [&>span]:mx-1 [&>span]:rounded-xl">
+                            <li className="relative group">بلیط
+                                <RiArrowDownSLine size="25"/>
+                                {/* sub menu (ticket) */}
+                                <ul className="absolute top-[44px] right-0 w-[8rem] bg-white pb-1 text-sm shadow-lg rounded-md border-solid border-[1px] border-gray-300 cursor-auto transition opacity-0 invisible group-hover:!opacity-100 group-hover:!visible [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-3 [&>span]:block [&>span]:h-px [&>span]:w-[100px] [&>span]:bg-gray-300 [&>span]:mx-auto [&>span]:my-1 [&>span]:rounded-xl">
+                                    <li>
+                                        <Link to="*">
+                                            پرواز داخلی
+                                        </Link>
+                                    </li>
+                                    <span/>
+                                    <li>
+                                        <Link to="*">
+                                            پرواز خارجی
+                                        </Link>
+                                    </li>
+                                    <span/>
+                                    <li>
+                                        <Link to="*">
+                                            قطار
+                                        </Link>
+                                    </li>
+                                    <span/>
+                                    <li>
+                                        <Link to="*">
+                                            اتوبوس
+                                        </Link>
+                                    </li>
+                                </ul>
                             </li>
                             <span/>
                             <li>اقامت
-                                <RiArrowDownSLine/>
+                                <RiArrowDownSLine size="25"/>
                             </li>
                             <span/>
                             <li>
@@ -42,7 +68,7 @@ export default function Header() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="flex items-center gap-5 [&>a]:flex [&>a]:items-center [&>a]:gap-1">
                         <Link to="*">
                             <AiOutlineQuestionCircle/>
                             مرکز پشتیبانی آنلاین
@@ -53,7 +79,7 @@ export default function Header() {
                         </Link>
                         <Link to="*">
                             <FaRegUser/>
-                            وروذ یا ثبت نام
+                            ورود یا ثبت نام
                         </Link>
                     </div>
 
