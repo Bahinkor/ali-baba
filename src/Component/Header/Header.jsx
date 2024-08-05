@@ -20,10 +20,10 @@ export default function Header() {
                         </Link>
 
                         <ul className="flex items-center [&>li]:flex [&>li]:items-center [&>li]:gap-1 [&>li]:py-1 [&>li]:px-4 [&>li]:cursor-pointer [&>span]:w-px [&>span]:h-6 [&>span]:bg-gray-300 [&>span]:mx-1 [&>span]:rounded-xl">
-                            <li className="relative !py-2 group">بلیط
+                            <li className="relative !py-4 group">بلیط
                                 <RiArrowDownSLine size="25"/>
                                 {/* sub menu (ticket) */}
-                                <ul className="absolute top-[42px] right-0 w-[8rem] bg-white pb-1 text-sm shadow-lg rounded-md border-solid border-[1px] border-gray-300 cursor-auto transition opacity-0 invisible group-hover:!opacity-100 group-hover:!visible [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-3 [&>span]:block [&>span]:h-px [&>span]:w-[100px] [&>span]:bg-gray-300 [&>span]:mx-auto [&>span]:my-1 [&>span]:rounded-xl">
+                                <ul className="absolute top-[52px] right-0 w-[8rem] bg-white pb-1 text-sm shadow-lg rounded-md border-solid border-[1px] border-gray-300 cursor-auto transition opacity-0 invisible group-hover:!opacity-100 group-hover:!visible [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-3 [&>span]:block [&>span]:h-px [&>span]:w-[100px] [&>span]:bg-gray-300 [&>span]:mx-auto [&>span]:my-1 [&>span]:rounded-xl">
                                     <li>
                                         <Link to="*">
                                             پرواز داخلی
@@ -50,10 +50,10 @@ export default function Header() {
                                 </ul>
                             </li>
                             <span/>
-                            <li className="relative !py-2 group">اقامت
+                            <li className="relative !py-4 group">اقامت
                                 <RiArrowDownSLine size="25"/>
                                 {/* sub menu (stay) */}
-                                <ul className="absolute top-[42px] right-0 w-[8rem] bg-white pb-1 text-sm shadow-lg rounded-md border-solid border-[1px] border-gray-300 cursor-auto transition opacity-0 invisible group-hover:!opacity-100 group-hover:!visible [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-3 [&>span]:block [&>span]:h-px [&>span]:w-[100px] [&>span]:bg-gray-300 [&>span]:mx-auto [&>span]:my-1 [&>span]:rounded-xl">
+                                <ul className="absolute top-[52px] right-0 w-[8rem] bg-white pb-1 text-sm shadow-lg rounded-md border-solid border-[1px] border-gray-300 cursor-auto transition opacity-0 invisible group-hover:!opacity-100 group-hover:!visible [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-3 [&>span]:block [&>span]:h-px [&>span]:w-[100px] [&>span]:bg-gray-300 [&>span]:mx-auto [&>span]:my-1 [&>span]:rounded-xl">
                                     <li>
                                         <Link to="*">
                                             هتل
