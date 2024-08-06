@@ -21,10 +21,11 @@ export default function Home() {
                                     </select>
                                 </div>
 
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 flex-wrap">
                                     <div className="product-box-input-wrapper">
                                         <div className="relative p-2 border-l border-solid border-gray-300">
-                                            <input type="text" className="outline-none" placeholder="مبدا (شهر)"/>
+                                            <input type="text" className="h-[30px] outline-none"
+                                                   placeholder="مبدا (شهر)"/>
 
                                             {/* arrow left-right */}
                                             <span className="product-arrow-left-right">
@@ -32,24 +33,27 @@ export default function Home() {
                                             </span>
                                         </div>
                                         <div className="p-2">
-                                            <input type="text" className="pr-4 outline-none" placeholder="مقصد (شهر)"/>
+                                            <input type="text" className="h-[30px] pr-4 outline-none"
+                                                   placeholder="مقصد (شهر)"/>
                                         </div>
                                     </div>
                                     <div className="product-box-input-wrapper">
                                         <div className="p-2 border-l border-solid border-gray-300">
-                                            <input type="text" className="outline-none" placeholder="تاریخ رفت"/>
+                                            <input type="text" className="max-w-[136px] h-[30px] outline-none"
+                                                   placeholder="تاریخ رفت"/>
                                         </div>
                                         <div className="p-2">
-                                            <input type="text" className="outline-none" placeholder="تاریخ بازگشت"/>
+                                            <input type="text" className="max-w-[136px] h-[30px] outline-none"
+                                                   placeholder="تاریخ بازگشت"/>
                                         </div>
                                     </div>
                                     <div className="product-box-input-wrapper">
                                         <div className="p-2">
-                                            <input type="text" className="outline-none" placeholder="تعداد مسافر"/>
+                                            <input type="text" className="w-[160px] h-[30px] outline-none"
+                                                   placeholder="تعداد مسافر"/>
                                         </div>
                                     </div>
-                                    <button type="submit"
-                                            className="product-box-input-wrapper bg-yellow-400 p-2 text-black">جستجو
+                                    <button type="submit" className="product-box-submit-button">جستجو
                                     </button>
                                 </div>
                             </div>

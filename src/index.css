@@ -25,10 +25,14 @@
     }
 
     .product-box-input-wrapper {
-        @apply flex items-center rounded-lg border border-solid border-gray-300
+        @apply flex items-center rounded-lg border-[2px] border-solid border-gray-300
     }
 
     .product-arrow-left-right {
         @apply absolute -left-4 top-1 flex items-center justify-center size-8 bg-white rounded-full border border-solid border-gray-300 z-20
+    }
+
+    .product-box-submit-button {
+        @apply block w-[160px] h-[46px] bg-yellow-400 text-black rounded-lg
     }
 }
