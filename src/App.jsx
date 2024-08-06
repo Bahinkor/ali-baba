@@ -11,7 +11,9 @@ export default function App() {
         <>
             <Header/>
 
-            {router}
+            <main className="mt-[57px]">
+                {router}
+            </main>
 
             {/* footer */}
         </>
