@@ -1,4 +1,5 @@
 import {NavLink} from "react-router-dom";
+import "./productsBox.css";
 
 export default function ProductsBox({children}) {
     //JSX
@@ -62,7 +63,7 @@ export default function ProductsBox({children}) {
 
             {/* products menu */}
             <div
-                className="flex justify-center text-gray-600 pt-1 pb-[2px] border-solid border-b border-[1px] border-gray-300">
+                className="flex justify-center text-gray-600 pt-1 pb-[2px] border-solid border-b border-[1px] border-gray-300 rounded-lg overflow-hidden">
                 <ul className="flex items-center [&>li>a]:product-box-item__link [&>li>a>svg]:product-box-item__link-svg">
                     <li>
                         <NavLink to="/">
@@ -73,7 +74,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#international-flight"/>
                             </svg>
@@ -81,7 +82,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#train"/>
                             </svg>
@@ -89,7 +90,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#bus"/>
                             </svg>
@@ -97,7 +98,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#tour"/>
                             </svg>
@@ -105,7 +106,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#hotel"/>
                             </svg>
@@ -113,7 +114,7 @@ export default function ProductsBox({children}) {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <NavLink to="*">
                             <svg>
                                 <use href="#villa"/>
                             </svg>
