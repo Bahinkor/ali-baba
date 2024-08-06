@@ -43,7 +43,7 @@ export default function Home() {
                                                    placeholder="تاریخ رفت"/>
                                         </div>
                                         <div className="p-2">
-                                            <input type="text" className="max-w-[136px] h-[30px] outline-none"
+                                            <input type="text" disabled className="max-w-[136px] h-[30px] outline-none"
                                                    placeholder="تاریخ بازگشت"/>
                                         </div>
                                     </div>
