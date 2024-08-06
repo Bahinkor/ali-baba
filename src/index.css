@@ -13,7 +13,7 @@
     }
 
     .product-box-item__link {
-        @apply flex flex-col items-center justify-center w-[144px] h-[80px] py-2 px-6
+        @apply flex flex-col items-center justify-center w-[144px] h-[80px] pt-2 pb-1 px-6
     }
 
     .product-box-item__link-svg {

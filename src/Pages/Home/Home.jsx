@@ -10,7 +10,9 @@ export default function Home() {
                 </div>
                 {/* products box */}
                 <ProductsBox>
+                    <div className="w-full h-20">
 
+                    </div>
                 </ProductsBox>
             </div>
         </div>

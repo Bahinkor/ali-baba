@@ -3,7 +3,8 @@ import {NavLink} from "react-router-dom";
 export default function ProductsBox({children}) {
     //JSX
     return (
-        <div className="w-[80%] border-solid border-[1px] border-gray-300 rounded-md mx-auto">
+        <div
+            className="w-[80%] bg-white border-solid border-[1px] border-gray-300 rounded-md mx-auto transform translate-y-[-87px]">
             {/* svg */}
             <svg className="hidden">
                 <symbol id="domestic-flight" viewBox="0 0 24 24" width="36px" height="36px" fill="currentColor"
@@ -60,7 +61,8 @@ export default function ProductsBox({children}) {
 
 
             {/* products menu */}
-            <div className="flex justify-center text-gray-600 py-1">
+            <div
+                className="flex justify-center text-gray-600 pt-1 pb-[2px] border-solid border-b border-[1px] border-gray-300">
                 <ul className="flex items-center [&>li>a]:product-box-item__link [&>li>a>svg]:product-box-item__link-svg">
                     <li>
                         <NavLink to="/">
