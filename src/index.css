@@ -19,4 +19,8 @@
     .product-box-item__link-svg {
         @apply size-[36px] mx-[30px] mb-1
     }
+
+    .product-select-box {
+        @apply inline-block p-1 mb-6 rounded-3xl border border-solid border-gray-300
+    }
 }
