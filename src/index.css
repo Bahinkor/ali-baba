@@ -11,4 +11,12 @@
     body {
         font-family: "alibaba", sans-serif;
     }
+
+    .product-box-item__link {
+        @apply flex flex-col items-center justify-center w-[144px] h-[80px] py-2 px-6
+    }
+
+    .product-box-item__link-svg {
+        @apply size-[36px] mx-[30px] mb-1
+    }
 }
