@@ -21,6 +21,14 @@
     }
 
     .product-select-box {
-        @apply inline-block p-1 mb-6 rounded-3xl border border-solid border-gray-300
+        @apply inline-block p-1 mb-6 text-sm rounded-3xl border border-solid border-gray-300
+    }
+
+    .product-box-input-wrapper {
+        @apply flex items-center rounded-lg border border-solid border-gray-300
+    }
+
+    .product-arrow-left-right {
+        @apply absolute -left-4 top-1 flex items-center justify-center size-8 bg-white rounded-full border border-solid border-gray-300 z-20
     }
 }

@@ -11,7 +11,7 @@ export default function Home() {
                 </div>
                 {/* products box */}
                 <ProductsBox>
-                    <div className="px-8 text-gray-600">
+                    <div className="px-8 pb-[36px] text-gray-600">
                         <form action="#" onSubmit={e => e.preventDefault()}>
                             <div>
                                 <div className="product-select-box">
@@ -21,32 +21,36 @@ export default function Home() {
                                     </select>
                                 </div>
 
-                                <div className="flex items-center">
-                                    <div>
-                                        <div>
-                                            <input type="text" placeholder="مبدا (شهر)"/>
+                                <div className="flex items-center gap-2">
+                                    <div className="product-box-input-wrapper">
+                                        <div className="relative p-2 border-l border-solid border-gray-300">
+                                            <input type="text" className="outline-none" placeholder="مبدا (شهر)"/>
+
+                                            {/* arrow left-right */}
+                                            <span className="product-arrow-left-right">
+                                                <LuArrowLeftRight/>
+                                            </span>
                                         </div>
-                                        <span>
-                                            <LuArrowLeftRight/>
-                                        </span>
-                                        <div>
-                                            <input type="text" placeholder="مقصد (شهر)"/>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div>
-                                                <input type="text" placeholder="تاریخ رفت"/>
-                                            </div>
-                                            <div>
-                                                <input type="text" placeholder="تاریخ بازگشت"/>
-                                            </div>
+                                        <div className="p-2">
+                                            <input type="text" className="pr-4 outline-none" placeholder="مقصد (شهر)"/>
                                         </div>
                                     </div>
-                                    <div>
-                                        <input type="text" placeholder="تعداد مسافر"/>
+                                    <div className="product-box-input-wrapper">
+                                        <div className="p-2 border-l border-solid border-gray-300">
+                                            <input type="text" className="outline-none" placeholder="تاریخ رفت"/>
+                                        </div>
+                                        <div className="p-2">
+                                            <input type="text" className="outline-none" placeholder="تاریخ بازگشت"/>
+                                        </div>
                                     </div>
-                                    <button type="submit">جستجو</button>
+                                    <div className="product-box-input-wrapper">
+                                        <div className="p-2">
+                                            <input type="text" className="outline-none" placeholder="تعداد مسافر"/>
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                            className="product-box-input-wrapper bg-yellow-400 p-2 text-black">جستجو
+                                    </button>
                                 </div>
                             </div>
                         </form>
