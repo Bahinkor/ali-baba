@@ -8,7 +8,7 @@ import {FaRegUser} from "react-icons/fa";
 export default function Header() {
     //JSX
     return (
-        <header className="fixed left-0 right-0 top-0 bg-white shadow-sm">
+        <header className="fixed left-0 right-0 top-0 bg-white shadow-sm z-30">
             <div className="container">
                 {/* top menu */}
                 <div className="flex items-center justify-between w-full text-gray-600">
