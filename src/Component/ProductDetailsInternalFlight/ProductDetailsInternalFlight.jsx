@@ -24,28 +24,31 @@ export default function ProductDetailsInternalFlight() {
     //state
     const [cities, setCities] = useState([
         {
-            value: "next.js",
-            label: "Next.js",
+            value: "تهران",
+            label: "تهران",
         },
         {
-            value: "sveltekit",
-            label: "SvelteKit",
+            value: "شیراز",
+            label: "شیراز",
         },
         {
-            value: "nuxt.js",
-            label: "Nuxt.js",
+            value: "مشهد",
+            label: "مشهد",
         },
         {
-            value: "remix",
-            label: "Remix",
+            value: "زنجان",
+            label: "زنجان",
         },
         {
-            value: "astro",
-            label: "Astro",
+            value: "کرج",
+            label: "کرج",
         },
     ]);
-    const [value, setValue] = useState("");
-    const [open, setOpen] = useState(false);
+
+    const [originInputValue, setOriginInputValue] = useState("");
+    const [destinationInputValue, setDestinationInputValue] = useState("");
+    const [isOpenSearchBarOriginInput, setIsOpenSearchBarOriginInput] = useState(false);
+    const [isOpenSearchBarDestinationInput, setIsOpenSearchBarDestinationInput] = useState(false);
 
     //JSX
     return (
@@ -65,17 +68,18 @@ export default function ProductDetailsInternalFlight() {
                             <div className="flex items-center gap-2 flex-wrap">
                                 <div className="product-box-input-wrapper">
                                     <div className="relative p-2 border-l border-solid border-gray-300">
-
-                                        <Popover open={open} onOpenChange={setOpen}>
+                                        {/* shadcn component (origin) */}
+                                        <Popover open={isOpenSearchBarOriginInput}
+                                                 onOpenChange={setIsOpenSearchBarOriginInput}>
                                             <PopoverTrigger asChild>
                                                 <Button
                                                     variant="outline"
                                                     role="combobox"
-                                                    aria-expanded={open}
-                                                    className="w-[200px] h-[30px] text-[16px] p-0 border-0 justify-between hover:bg-white"
+                                                    aria-expanded={isOpenSearchBarOriginInput}
+                                                    className="w-[200px] h-[30px] text-[16px] p-0 border-0 justify-between !outline-none hover:bg-white"
                                                 >
-                                                    {value
-                                                        ? cities.find((city) => city.value === value)?.label
+                                                    {originInputValue
+                                                        ? cities.find((city) => city.value === originInputValue)?.label
                                                         : "مبدا (شهر)"}
                                                 </Button>
                                             </PopoverTrigger>
@@ -90,17 +94,17 @@ export default function ProductDetailsInternalFlight() {
                                                                     key={city.value}
                                                                     value={city.value}
                                                                     onSelect={(currentValue) => {
-                                                                        setValue(currentValue === value ? "" : currentValue)
-                                                                        setOpen(false)
+                                                                        setOriginInputValue(currentValue === originInputValue ? "" : currentValue)
+                                                                        setIsOpenSearchBarOriginInput(false)
                                                                     }}
                                                                 >
                                                                     <Check
                                                                         className={cn(
                                                                             "mr-2 h-4 w-4",
-                                                                            value === city.value ? "opacity-100" : "opacity-0"
+                                                                            originInputValue === city.value ? "opacity-100" : "opacity-0"
                                                                         )}
                                                                     />
-                                                                    {cities.label}
+                                                                    {city.label}
                                                                 </CommandItem>
                                                             ))}
                                                         </CommandGroup>
@@ -115,8 +119,52 @@ export default function ProductDetailsInternalFlight() {
                                             </span>
                                     </div>
                                     <div className="p-2">
-                                        <input type="text" className="h-[30px] pr-4 outline-none"
-                                               placeholder="مقصد (شهر)"/>
+
+                                        {/* shadcn component (destination) */}
+                                        <Popover open={isOpenSearchBarDestinationInput}
+                                                 onOpenChange={setIsOpenSearchBarDestinationInput}>
+                                            <PopoverTrigger asChild>
+                                                <Button
+                                                    variant="outline"
+                                                    role="combobox"
+                                                    aria-expanded={isOpenSearchBarDestinationInput}
+                                                    className="w-[200px] h-[30px] text-[16px] p-0 pr-4 border-0 justify-between outline-none hover:bg-white"
+                                                >
+                                                    {destinationInputValue
+                                                        ? cities.find((city) => city.value === destinationInputValue)?.label
+                                                        : "مقصد (شهر)"}
+                                                </Button>
+                                            </PopoverTrigger>
+                                            <PopoverContent className="w-[200px] p-0">
+                                                <Command>
+                                                    <CommandInput placeholder="جستحوی شهر"/>
+                                                    <CommandList>
+                                                        <CommandEmpty>یافت نشد!</CommandEmpty>
+                                                        <CommandGroup>
+                                                            {cities.map((city) => (
+                                                                <CommandItem
+                                                                    key={city.value}
+                                                                    value={city.value}
+                                                                    onSelect={(currentValue) => {
+                                                                        setDestinationInputValue(currentValue === destinationInputValue ? "" : currentValue)
+                                                                        setIsOpenSearchBarDestinationInput(false)
+                                                                    }}
+                                                                >
+                                                                    <Check
+                                                                        className={cn(
+                                                                            "mr-2 h-4 w-4",
+                                                                            destinationInputValue === city.value ? "opacity-100" : "opacity-0"
+                                                                        )}
+                                                                    />
+                                                                    {city.label}
+                                                                </CommandItem>
+                                                            ))}
+                                                        </CommandGroup>
+                                                    </CommandList>
+                                                </Command>
+                                            </PopoverContent>
+                                        </Popover>
+
                                     </div>
                                 </div>
                                 <div className="product-box-input-wrapper">
