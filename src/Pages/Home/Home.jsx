@@ -1,4 +1,5 @@
-import ProductDetailsInternalFlight from "@/Component/ProductDetailsInternalFlight/ProductDetailsInternalFlight.jsx";
+import ProductDetailsInternalFlight
+    from "../../Component/ProductDetailsInternalFlight/ProductDetailsInternalFlight.jsx";
 
 export default function Home() {
     //JSX
