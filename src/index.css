@@ -94,7 +94,7 @@
     }
 
     .product-arrow-left-right {
-        @apply absolute -left-4 top-0 bottom-0 my-auto flex items-center justify-center size-8 bg-white rounded-full border border-solid border-gray-300 z-20 cursor-pointer
+        @apply absolute -left-4 top-0 bottom-0 my-auto flex items-center justify-center size-8 bg-white rounded-full border border-solid border-gray-300 z-20
     }
 
     .product-box-submit-button {

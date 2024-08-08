@@ -50,6 +50,15 @@ export default function ProductDetailsInternalFlight() {
     const [isOpenSearchBarOriginInput, setIsOpenSearchBarOriginInput] = useState(false);
     const [isOpenSearchBarDestinationInput, setIsOpenSearchBarDestinationInput] = useState(false);
 
+    //function
+    const changeCitiesValueHandler = () => {
+        if (originInputValue !== "" && destinationInputValue !== "") {
+            setOriginInputValue(destinationInputValue);
+            setDestinationInputValue(originInputValue);
+        }
+    }
+
+
     //JSX
     return (
         <>
@@ -115,9 +124,11 @@ export default function ProductDetailsInternalFlight() {
                                         </Popover>
 
                                         {/* arrow left-right */}
-                                        <span className="product-arrow-left-right">
+                                        <span
+                                            className={`product-arrow-left-right ${originInputValue === "" || destinationInputValue === "" ? "!cursor-not-allowed" : "cursor-pointer"}`}
+                                            onClick={changeCitiesValueHandler}>
                                                 <LuArrowLeftRight/>
-                                            </span>
+                                        </span>
                                     </div>
                                     <div className="p-2">
 
