@@ -68,6 +68,7 @@ export default function ProductDetailsInternalFlight() {
                             <div className="flex items-center gap-2 flex-wrap">
                                 <div className="product-box-input-wrapper">
                                     <div className="relative p-2 border-l border-solid border-gray-300">
+
                                         {/* shadcn component (origin) */}
                                         <Popover open={isOpenSearchBarOriginInput}
                                                  onOpenChange={setIsOpenSearchBarOriginInput}>
