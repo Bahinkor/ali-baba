@@ -98,6 +98,6 @@
     }
 
     .product-box-submit-button {
-        @apply block w-[160px] h-[46px] bg-yellow-400 text-black rounded-lg
+        @apply block w-[160px] h-[46px] bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors
     }
 }
