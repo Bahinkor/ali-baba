@@ -1,9 +1,23 @@
 import React, {useState} from "react";
 import {FaPlus, FaMinus} from "react-icons/fa";
+import {englishToPersian} from "@/utils/englishToPersianNumber.jsx";
+
 
 export default function NumberPassengersInput() {
     //state
     const [isShowCounterBox, setIsShowCounterBox] = useState(false);
+
+    const [adultPassengers, setAdultPassengers] = useState(1);
+    const [childPassengers, setChildPassengers] = useState(0);
+    const [infantPassengers, setInfantPassengers] = useState(0);
+    const [sumPassengers, setSumPassengers] = useState(adultPassengers + childPassengers + infantPassengers);
+
+    const [adultPassengersFA, setAdultPassengersFA] = useState(englishToPersian(adultPassengers));
+    const [childPassengersFA, setChildPassengersFA] = useState(englishToPersian(childPassengers));
+    const [infantPassengersFA, setInfantPassengersFA] = useState(englishToPersian(infantPassengers));
+    const [sumPassengersFA, setSumPassengersFA] = useState(englishToPersian(sumPassengers));
+
+    //function
 
 
     //JSX
@@ -11,15 +25,14 @@ export default function NumberPassengersInput() {
         <div className="relative product-box-input-wrapper">
             <div className="p-2">
                 <input type="text" className="w-[160px] h-[30px] outline-none"
-                       value="۱ مسافر"
+                       value={`${sumPassengersFA} مسافر `}
                        readOnly
                        onClick={() => setIsShowCounterBox(!isShowCounterBox)}
                 />
 
                 {/* counter box */}
                 <div
-                    className={`absolute top-[47px] w-[300px] bg-white p-4 rounded-md border border-solid border-gray-300 transition opacity-0 invisible ${isShowCounterBox ? "!opacity-100 !visible" : ""} [&>div]:flex [&>div]:items-center [&>div]:justify-between [&>div]:mb-6`}
-                    onClick={() => setIsShowCounterBox(true)}>
+                    className={`absolute top-[47px] w-[300px] bg-white p-4 rounded-md border border-solid border-gray-300 transition opacity-0 invisible ${isShowCounterBox ? "!opacity-100 !visible" : ""} [&>div]:flex [&>div]:items-center [&>div]:justify-between [&>div]:mb-6`}>
 
                     {/* Adults */}
                     <div>
@@ -32,7 +45,7 @@ export default function NumberPassengersInput() {
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">۱</span>
+                            <span className="w-7 text-center text-black">{adultPassengersFA}</span>
 
                             <button>
                                 <FaMinus/>
@@ -51,7 +64,7 @@ export default function NumberPassengersInput() {
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">۰</span>
+                            <span className="w-7 text-center text-black">{childPassengersFA}</span>
 
                             <button>
                                 <FaMinus/>
@@ -70,7 +83,7 @@ export default function NumberPassengersInput() {
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">۰</span>
+                            <span className="w-7 text-center text-black">{infantPassengersFA}</span>
 
                             <button>
                                 <FaMinus/>
