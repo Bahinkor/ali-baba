@@ -1,26 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import {FaPlus, FaMinus} from "react-icons/fa";
 
 export default function NumberPassengersInput() {
+    //state
+    const [isShowCounterBox, setIsShowCounterBox] = useState(false);
+
+
     //JSX
     return (
         <div className="relative product-box-input-wrapper">
             <div className="p-2">
                 <input type="text" className="w-[160px] h-[30px] outline-none"
-                       placeholder="تعداد مسافر"/>
+                       value="۱ مسافر"
+                       readOnly
+                       onClick={() => setIsShowCounterBox(!isShowCounterBox)}
+                />
 
                 {/* counter box */}
-                <div className="absolute w-[300px] p-4 border border-solid border-gray-300">
-                    <div className="flex items-center justify-between">
-                        <p>بزرگسال
-                            <span>(۱۲ سال به بالا)</span>
+                <div
+                    className={`absolute top-[47px] w-[300px] bg-white p-4 rounded-md border border-solid border-gray-300 transition opacity-0 invisible ${isShowCounterBox ? "!opacity-100 !visible" : ""} [&>div]:flex [&>div]:items-center [&>div]:justify-between [&>div]:mb-6`}
+                    onClick={() => setIsShowCounterBox(true)}>
+
+                    {/* Adults */}
+                    <div>
+                        <p className="text-sm text-black">بزرگسال
+                            <span className="text-gray-500 mr-2">(۱۲ سال به بالا)</span>
                         </p>
-                        <div>
+                        <div
+                            className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
                             <button>
                                 <FaPlus/>
                             </button>
 
-                            <span>۱</span>
+                            <span className="w-7 text-center text-black">۱</span>
 
                             <button>
                                 <FaMinus/>
@@ -28,17 +40,18 @@ export default function NumberPassengersInput() {
                         </div>
                     </div>
 
-                    {/*    */}
+                    {/* Children */}
                     <div>
-                        <p>کودک
-                            <span>(۲ تا ۱۲ سال)</span>
+                        <p className="text-sm text-black">کودک
+                            <span className="text-gray-500 mr-2">(۲ تا ۱۲ سال)</span>
                         </p>
-                        <div>
+                        <div
+                            className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
                             <button>
                                 <FaPlus/>
                             </button>
 
-                            <span>۰</span>
+                            <span className="w-7 text-center text-black">۰</span>
 
                             <button>
                                 <FaMinus/>
@@ -46,17 +59,18 @@ export default function NumberPassengersInput() {
                         </div>
                     </div>
 
-                    {/*    */}
-                    <div>
-                        <p>نوزاذ
-                            <span>(۱۰ روز تا ۲ سال)</span>
+                    {/* babies */}
+                    <div className="!mb-0">
+                        <p className="text-sm text-black">نوزاد
+                            <span className="text-gray-500 mr-2">(۱۰ روز تا ۲ سال)</span>
                         </p>
-                        <div>
+                        <div
+                            className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
                             <button>
                                 <FaPlus/>
                             </button>
 
-                            <span>۰</span>
+                            <span className="w-7 text-center text-black">۰</span>
 
                             <button>
                                 <FaMinus/>
