@@ -12,12 +12,22 @@ export default function NumberPassengersInput() {
     const [infantPassengers, setInfantPassengers] = useState(0);
     const [sumPassengers, setSumPassengers] = useState(adultPassengers + childPassengers + infantPassengers);
 
-    const [adultPassengersFA, setAdultPassengersFA] = useState(englishToPersian(adultPassengers));
-    const [childPassengersFA, setChildPassengersFA] = useState(englishToPersian(childPassengers));
-    const [infantPassengersFA, setInfantPassengersFA] = useState(englishToPersian(infantPassengers));
-    const [sumPassengersFA, setSumPassengersFA] = useState(englishToPersian(sumPassengers));
-
     //function
+    const increaseAdultPassengers = () => {
+        if (adultPassengers < 9) {
+            setAdultPassengers(prevState => {
+                return prevState + 1
+            });
+        }
+    }
+
+    const decreaseAdultPassengers = () => {
+        if (adultPassengers > 1) {
+            setAdultPassengers(prevState => {
+                return prevState - 1
+            });
+        }
+    }
 
 
     //JSX
@@ -25,7 +35,7 @@ export default function NumberPassengersInput() {
         <div className="relative product-box-input-wrapper">
             <div className="p-2">
                 <input type="text" className="w-[160px] h-[30px] outline-none"
-                       value={`${sumPassengersFA} مسافر `}
+                       value={`${englishToPersian(sumPassengers)} مسافر `}
                        readOnly
                        onClick={() => setIsShowCounterBox(!isShowCounterBox)}
                 />
@@ -41,13 +51,13 @@ export default function NumberPassengersInput() {
                         </p>
                         <div
                             className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
-                            <button>
+                            <button onClick={increaseAdultPassengers}>
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">{adultPassengersFA}</span>
+                            <span className="w-7 text-center text-black">{englishToPersian(adultPassengers)}</span>
 
-                            <button>
+                            <button onClick={decreaseAdultPassengers}>
                                 <FaMinus/>
                             </button>
                         </div>
@@ -64,7 +74,7 @@ export default function NumberPassengersInput() {
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">{childPassengersFA}</span>
+                            <span className="w-7 text-center text-black">{}</span>
 
                             <button>
                                 <FaMinus/>
@@ -83,7 +93,7 @@ export default function NumberPassengersInput() {
                                 <FaPlus/>
                             </button>
 
-                            <span className="w-7 text-center text-black">{infantPassengersFA}</span>
+                            <span className="w-7 text-center text-black">{}</span>
 
                             <button>
                                 <FaMinus/>
