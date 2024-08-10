@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import InputLabel from "@/Component/InputLabel/InputLabel.jsx";
+import {IsReturnContext} from "@/ContextAPI/IsReturn.jsx";
 
 export default function SelectDateInputs() {
     //state
@@ -11,6 +12,30 @@ export default function SelectDateInputs() {
 
     const [isShowDepartureDateLabel, setIsShowDepartureDateLabel] = useState(false);
     const [isShowReturnDateLabel, setIsShowReturnDateLabel] = useState(false);
+    const [isReturn, setIsReturn] = useState(false);
+
+    //context
+    const {isReturnPassenger, setIsReturnPassenger} = useContext(IsReturnContext);
+
+    //function
+    const isReturnPassengerHandler = () => {
+
+        if (isReturnPassenger === true || isReturnPassenger === "true") {
+            setIsReturn(false);
+        } else if (isReturnPassenger === false || isReturnPassenger === "false") {
+            setIsReturn(true);
+        }
+
+    }
+
+    //useEffect
+    useEffect(() => {
+        isReturnPassengerHandler();
+
+        if (!isReturn) {
+            setReturnDate(null)
+        }
+    }, [isReturnPassenger])
 
 
     //JSX
@@ -46,6 +71,7 @@ export default function SelectDateInputs() {
                                 return (
                                     <input
                                         value={value}
+                                        disabled={isReturn}
                                         onClick={openCalendar}
                                         readOnly
                                         className="w-[136px] h-[30px] p-0 m-0 border-0 outline-none"
