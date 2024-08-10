@@ -4,21 +4,11 @@ import "./productsBox.css";
 export default function ProductsBox({children}) {
     //JSX
     return (
-        <div className="relative">
-            {/* shape */}
-            <div
-                className="flex justify-center md:hidden absolute -top-[115px] -right-[90px] w-[50rem] h-[15rem] bg-yellow-400 rounded-full">
-
-                <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/shawl_logotype_black-86af55bd.svg"
-                     alt="ali baba logo"
-                     className="w-[125px] transform translate-y-[-33px]"
-                />
-            </div>
-
+        <div>
 
             {/* product box */}
             <div
-                className="w-[80%] bg-white border-solid border-[1px] border-gray-300 rounded-md mx-auto transform md:translate-y-[-87px]">
+                className="w-full md:w-[80%] bg-white border-solid border-[1px] border-gray-300 rounded-md mx-auto transform md:translate-y-[-87px]">
                 {/* svg */}
                 <svg className="hidden">
                     <symbol id="domestic-flight" viewBox="0 0 24 24" width="36px" height="36px" fill="currentColor"

@@ -59,7 +59,7 @@ export default function SelectCitiesInput() {
     //JSX
     return (
         <div className="product-box-input-wrapper">
-            <div className="relative p-2 border-l border-solid border-gray-300">
+            <div className="relative p-2 xs:border-l border-b border-solid border-gray-300">
 
                 {/* shadcn component (origin) */}
                 <Popover open={isOpenSearchBarOriginInput}
@@ -123,7 +123,7 @@ export default function SelectCitiesInput() {
                             variant="outline"
                             role="combobox"
                             aria-expanded={isOpenSearchBarDestinationInput}
-                            className="w-[200px] h-[30px] text-[16px] p-0 pr-4 border-0 justify-between outline-none hover:bg-white"
+                            className="w-[200px] h-[30px] text-[16px] p-0 mr-0 xs:pr-4 border-0 justify-between outline-none hover:bg-white"
                         >
                             {destinationInputValue
                                 ? cities.find((city) => city.value === destinationInputValue)?.label

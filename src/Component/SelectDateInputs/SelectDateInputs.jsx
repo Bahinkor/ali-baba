@@ -16,7 +16,7 @@ export default function SelectDateInputs() {
     //JSX
     return (
         <div className="product-box-input-wrapper">
-            <div className="relative p-2 border-l border-solid border-gray-300">
+            <div className="relative p-2 xs:border-l border-b border-solid border-gray-300">
                 <InputLabel value="تاریخ رفت" isShow={isShowDepartureDateLabel}/>
 
                 {/* date picker package (departure date) */}
