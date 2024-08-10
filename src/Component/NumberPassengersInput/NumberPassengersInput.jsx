@@ -68,7 +68,7 @@ export default function NumberPassengersInput() {
                 {/* counter box */}
                 <div
                     className={`absolute top-[47px] w-[300px] bg-white p-4 rounded-md border border-solid border-gray-300 transition opacity-0 invisible ${isShowCounterBox ? "!opacity-100 !visible" : ""} [&>div]:flex [&>div]:items-center [&>div]:justify-between [&>div]:mb-6`}>
-
+                    
                     {/* Adults */}
                     <div>
                         <p className="text-sm text-black">بزرگسال
