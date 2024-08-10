@@ -1,0 +1,7 @@
+.mobile-bottom-menu .active {
+    color: #0077DB;
+}
+
+.mobile-bottom-menu .active::after {
+    content: none;
+}
