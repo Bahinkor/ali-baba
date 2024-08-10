@@ -12,3 +12,18 @@
     height: 6px;
     border-radius: 15px;
 }
+
+.product-box-overflow {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 4px;
+    background: lightgray;
+}

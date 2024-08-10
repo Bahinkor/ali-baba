@@ -64,7 +64,7 @@ export default function ProductsBox({children}) {
             {/* products menu */}
             <div
                 className="flex justify-center text-gray-600 pt-1 pb-[2px] mb-6 border-solid border-b border-[1px] border-gray-300 rounded-lg overflow-hidden">
-                <ul className="flex items-center [&>li>a]:product-box-item__link [&>li>a>svg]:product-box-item__link-svg">
+                <ul className="product-box-overflow xl:!overflow-hidden flex items-center [&>li>a]:product-box-item__link [&>li>a>svg]:product-box-item__link-svg">
                     <li>
                         <NavLink to="/">
                             <svg>
