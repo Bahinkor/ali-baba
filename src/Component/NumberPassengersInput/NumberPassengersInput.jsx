@@ -76,13 +76,15 @@ export default function NumberPassengersInput() {
                         </p>
                         <div
                             className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
-                            <button onClick={increaseAdultPassengers}>
+                            <button onClick={increaseAdultPassengers}
+                                    className={`${adultPassengers === 9 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaPlus/>
                             </button>
 
                             <span className="w-7 text-center text-black">{englishToPersian(adultPassengers)}</span>
 
-                            <button onClick={decreaseAdultPassengers}>
+                            <button onClick={decreaseAdultPassengers}
+                                    className={`${adultPassengers === 1 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaMinus/>
                             </button>
                         </div>
@@ -95,13 +97,15 @@ export default function NumberPassengersInput() {
                         </p>
                         <div
                             className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
-                            <button onClick={increaseChildPassengers}>
+                            <button onClick={increaseChildPassengers}
+                                    className={`${childPassengers === 9 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaPlus/>
                             </button>
 
                             <span className="w-7 text-center text-black">{englishToPersian(childPassengers)}</span>
 
-                            <button onClick={decreaseChildPassengers}>
+                            <button onClick={decreaseChildPassengers}
+                                    className={`${childPassengers === 0 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaMinus/>
                             </button>
                         </div>
@@ -114,13 +118,15 @@ export default function NumberPassengersInput() {
                         </p>
                         <div
                             className="flex items-center gap-2 [&>button]:bg-blue-500 [&>button]:text-white [&>button]:p-1 [&>button]:rounded-md">
-                            <button onClick={increaseInfantPassengers}>
+                            <button onClick={increaseInfantPassengers}
+                                    className={`${infantPassengers === 9 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaPlus/>
                             </button>
 
                             <span className="w-7 text-center text-black">{englishToPersian(infantPassengers)}</span>
 
-                            <button onClick={decreaseInfantPassengers}>
+                            <button onClick={decreaseInfantPassengers}
+                                    className={`${infantPassengers === 0 ? "!bg-blue-400 cursor-not-allowed" : ""}`}>
                                 <FaMinus/>
                             </button>
                         </div>
