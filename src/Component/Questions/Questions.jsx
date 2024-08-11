@@ -67,7 +67,7 @@ export default function Questions() {
                                     </div>
                                 </AccordionTrigger>
                                 <AccordionContent>
-                                    <p className="text-gray-500 px-[48px] leading-loose">
+                                    <p className="text-gray-500 text-start px-[48px] leading-loose">
                                         {item.answer}
                                     </p>
                                 </AccordionContent>

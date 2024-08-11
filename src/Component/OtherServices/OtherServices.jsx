@@ -7,12 +7,12 @@ import {FaAndroid, FaApple} from "react-icons/fa";
 export default function OtherServices() {
     //JSX
     return (
-        <div className="-mt-[50px]">
+        <div className="mt-5 md:-mt-[50px]">
             <div className="w-[80%] mx-auto">
                 <div>
                     <h3 className="text-black text-lg font-bold mb-5">سایر خدمات علی بابا</h3>
                     <div
-                        className="flex items-center justify-around text-gray-600 text-sm p-3 border border-solid border-gray-300 rounded-md [&>a]:flex [&>a]:items-center [&>a]:gap-4 [&>span]:w-px [&>span]:h-8 [&>span]:bg-gray-300">
+                        className="flex items-center justify-around flex-col md:flex-row text-gray-600 text-sm p-3 border border-solid border-gray-300 rounded-md [&>a]:flex [&>a]:items-center [&>a]:gap-4 [&>span]:w-px [&>span]:h-8 [&>span]:bg-gray-300">
                         <Link to="*">
                             <img src="https://cdn.alibaba.ir/h2/desktop/assets/images/safarcard-3dc2c4c4.svg"
                                  alt="سفر سازمانی"/>
@@ -66,7 +66,7 @@ export default function OtherServices() {
 
                 {/* mobile app poster */}
                 <div
-                    className="flex items-center justify-between px-20 pt-3 mt-5 border border-solid border-gray-300 rounded-md">
+                    className="flex items-center justify-between flex-col md:flex-row px-5 md:px-20 pt-3 mt-5 border border-solid border-gray-300 rounded-md">
                     <div className="flex items-center gap-12">
                         <div>
                             {/* QR code image */}

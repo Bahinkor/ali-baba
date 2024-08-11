@@ -10,7 +10,7 @@ export default function MobileBottomMenu() {
     //JSX
     return (
         <div
-            className="absolute bottom-0 left-0 right-0 block md:hidden bg-white pt-2 pb-1 border-t border-solid border-gray-300">
+            className="fixed bottom-0 left-0 right-0 block md:hidden bg-white pt-2 pb-1 border-t border-solid border-gray-300">
             <div className="container">
                 <div
                     className="mobile-bottom-menu flex items-center justify-between gap-2 [&>div>a]:flex [&>div>a]:flex-col [&>div>a]:items-center [&>div>a>span]:text-xs">
