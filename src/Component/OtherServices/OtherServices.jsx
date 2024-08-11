@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {MdKeyboardArrowLeft} from "react-icons/md";
+import {FaAndroid, FaApple} from "react-icons/fa";
 
 export default function OtherServices() {
     //JSX
@@ -59,6 +61,40 @@ export default function OtherServices() {
                             src="https://cdn.alibaba.ir/cms/uploads/AL_Digitalmarketing_Hotel_Festival_Cardview_Banner_Desktop_03_05_08_8bac9a36b0.png"
                             alt="ali baba" loading="lazy"/>
                     </Link>
+                </div>
+
+                {/* mobile app poster */}
+                <div
+                    className="flex items-center justify-between px-20 pt-3 mt-5 border border-solid border-gray-300 rounded-md">
+                    <div className="flex items-center gap-12">
+                        <div>
+                            {/* QR code image */}
+                            <img src="https://cdn.alibaba.ir/h2/desktop/assets/images/app-mobile/qrcode-56155e39.png"
+                                 alt="ali baba mobile app QR code"/>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold mb-2">اپلیکیشن علی بابا</h3>
+                            <span>سریع تر و مطمئن تر به سفر بروید</span>
+                            <Link to="*"
+                                  className="flex items-center text-blue-600 my-5">مشاهده لینک دانلود
+                                <MdKeyboardArrowLeft size="30"/>
+                            </Link>
+                            <span className="flex items-center gap-2 text-gray-400 text-sm">
+                                <FaApple size="20"/>
+                                <FaAndroid size="20"/>
+                                قابلیت نصب روی Android و IOS
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* mobile image */}
+                    <div>
+                        <img
+                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/app-mobile/app-mobile@4x-e3e3b7dc.webp"
+                            alt="ali baba mobile app"
+                            className="w-[300px]"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
