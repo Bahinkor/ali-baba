@@ -1,5 +1,7 @@
 import ProductDetailsInternalFlight
     from "../../Component/ProductDetailsInternalFlight/ProductDetailsInternalFlight.jsx";
+import OtherServices from "@/Component/OtherServices/OtherServices.jsx";
+
 
 export default function Home() {
     //JSX
@@ -25,6 +27,9 @@ export default function Home() {
                     </div>
                     {/* products Details box */}
                     <ProductDetailsInternalFlight/>
+
+                    {/* other services */}
+                    <OtherServices/>
                 </div>
             </div>
         </>
