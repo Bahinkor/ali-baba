@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Questions from '../Questions/Questions.jsx';
 import {MdKeyboardArrowLeft} from "react-icons/md";
 import {FaAndroid, FaApple} from "react-icons/fa";
 
@@ -96,6 +97,9 @@ export default function OtherServices() {
                         />
                     </div>
                 </div>
+
+                {/* Questions section */}
+                <Questions/>
             </div>
         </div>
     );
