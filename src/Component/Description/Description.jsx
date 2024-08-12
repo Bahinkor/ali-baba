@@ -3,7 +3,7 @@ import React from 'react';
 export default function Description() {
     //JSX
     return (
-        <div className="w-[80%] mx-auto mt-10 text-sm text-gray-600 leading-loose">
+        <div className="w-full md:w-[80%] mx-auto mt-10 text-sm text-gray-600 leading-loose">
             <div className="flex items-center flex-col lg:flex-row justify-between xl:gap-40">
                 <div>
                     <h3 className="text-xl text-black font-bold my-10">بلیط هواپیما</h3>

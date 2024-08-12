@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Footer() {
     //JSX
@@ -6,7 +7,7 @@ export default function Footer() {
         <footer>
             <div className="mt-[10rem] border-t border-solid border-gray-300">
                 <div className="container">
-                    <div className="w-[80%] mx-auto">
+                    <div className="w-full md:w-[80%] mx-auto">
                         <div
                             className="flex items-center justify-around flex-col lg:flex-row gap-10 lg:gap-20 py-10 [&>div]:flex [&>div]:items-center [&>div]:gap-2">
                             {/*  */}
@@ -47,7 +48,98 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div></div>
+                        <div className="flex flex-col md:flex-row py-7 text-sm border-t border-solid border-gray-300">
+                            <div className="w-full md:w-[50%] flex justify-between mb-10 md:mb-0">
+                                <div>
+                                    <span className="block font-semibold mb-4">علی بابا</span>
+                                    <ul className="flex flex-col gap-2 text-gray-600">
+                                        <li>
+                                            <Link to="*">درباره ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">تماس با ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">چزا علی بابا</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">علی بابا پلاس</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/*  */}
+                                <div>
+                                    <span className="block font-semibold mb-4">خدمات مشتریان</span>
+                                    <ul className="flex flex-col gap-2 text-gray-600">
+                                        <li>
+                                            <Link to="*">درباره ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">تماس با ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">چزا علی بابا</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">علی بابا پلاس</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/*  */}
+                                <div>
+                                    <span className="block font-semibold mb-4">اطلاعات تکمیلی</span>
+                                    <ul className="flex flex-col gap-2 text-gray-600">
+                                        <li>
+                                            <Link to="*">درباره ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">تماس با ما</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">چزا علی بابا</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="*">علی بابا پلاس</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="w-full md:w-[50%] flex flex-col items-end text-gray-600 gap-5">
+                                <img src="https://cdn.alibaba.ir/h2/desktop/assets/images/shawl_logotype-d6b14ca0.svg"
+                                     alt="ali baba" loading="lazy" className="w-[145px]"
+                                />
+                                <span>تلفن پشتیبانی: ۰۲۱ - ۴۳۹۰۰۰۰۰</span>
+                                <span>دفتر پشتیبانی: اکباتان، نبش اتوبان لشگری، کوی بیمه، خیابان بیمه چهارم، بن‌بست گل‌ها، پلاک ۱</span>
+                                <div className="flex items-center gap-5">
+                                    <Link to="*">
+                                        <img
+                                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/footer/ecunion-35c3c933.jpg"
+                                            alt="ali baba" loading="lazy" className="w-[69px]"/>
+                                    </Link>
+                                    <Link to="&">
+                                        <img
+                                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/footer/samandehi-6e2b448a.png"
+                                            alt="ali baba" loading="lazy" className="w-[69px]"/>
+                                    </Link>
+                                    <Link to="*">
+                                        <img
+                                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/footer/passenger-rights-48368f81.svg"
+                                            alt="ali baba" loading="lazy" className="w-[69px]"/>
+                                    </Link>
+                                    <Link to="*">
+                                        <img
+                                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/footer/aira-682b7c43.png"
+                                            alt="ali baba" loading="lazy" className="w-[69px]"/>
+                                    </Link>
+                                    <Link to="*">
+                                        <img
+                                            src="https://cdn.alibaba.ir/h2/desktop/assets/images/footer/state-airline-f45c55b2.svg"
+                                            alt="ali baba" loading="lazy" className="w-[69px]"/>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

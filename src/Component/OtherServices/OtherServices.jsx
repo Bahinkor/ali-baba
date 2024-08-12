@@ -8,7 +8,7 @@ export default function OtherServices() {
     //JSX
     return (
         <div className="mt-5 md:-mt-[50px]">
-            <div className="w-[80%] mx-auto">
+            <div className="w-full md:w-[80%] mx-auto">
                 <div>
                     <h3 className="text-black text-lg font-bold mb-5">سایر خدمات علی بابا</h3>
                     <div
