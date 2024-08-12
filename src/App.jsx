@@ -4,6 +4,7 @@ import routes from "./routes/routes.jsx";
 import Header from "./Component/Header/Header.jsx";
 import MobileBottomMenu from "@/Component/MobileBottomMenu/MobileBottomMenu.jsx";
 import IsReturn from "@/ContextAPI/IsReturn.jsx";
+import Footer from "@/Component/Footer/Footer.jsx";
 
 
 export default function App() {
@@ -25,7 +26,7 @@ export default function App() {
 
                 </main>
 
-                {/* footer */}
+                <Footer/>
             </>
         </IsReturn>
     )
