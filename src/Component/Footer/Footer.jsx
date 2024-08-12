@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {FaTelegramPlane, FaYoutube, FaTwitter, FaInstagram, FaLinkedin} from "react-icons/fa";
 
 export default function Footer() {
     //JSX
@@ -138,6 +139,32 @@ export default function Footer() {
                                             alt="ali baba" loading="lazy" className="w-[69px]"/>
                                     </Link>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* social media */}
+                        <div
+                            className="flex items-center justify-between flex-col md:flex-row text-xs text-gray-600 py-12 md:py-7">
+                            <p className="text-center mb-3 md:mb-0">کلیه حقوق این سرویس (وب‌سایت و اپلیکیشن‌های موبایل)
+                                محفوظ و متعلق به شرکت سفرهای علی‌بابا
+                                می‌باشد. (نسخه 3.55.1)</p>
+
+                            <div className="flex items-center gap-5">
+                                <a href="https://telegram.org">
+                                    <FaTelegramPlane size="25"/>
+                                </a>
+                                <a href="https://youtube.com">
+                                    <FaYoutube size="25"/>
+                                </a>
+                                <a href="https://x.com">
+                                    <FaTwitter size="25"/>
+                                </a>
+                                <a href="https://instagram.com">
+                                    <FaInstagram size="25"/>
+                                </a>
+                                <a href="https://linkedin.com">
+                                    <FaLinkedin size="25"/>
+                                </a>
                             </div>
                         </div>
                     </div>
