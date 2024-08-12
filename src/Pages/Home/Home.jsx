@@ -1,6 +1,7 @@
 import ProductDetailsInternalFlight
     from "../../Component/ProductDetailsInternalFlight/ProductDetailsInternalFlight.jsx";
 import OtherServices from "@/Component/OtherServices/OtherServices.jsx";
+import Description from "@/Component/Description/Description.jsx";
 
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
 
                     {/* other services */}
                     <OtherServices/>
+
+                    {/* Description */}
+                    <Description/>
                 </div>
             </div>
         </>
